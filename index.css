@@ -1,21 +1,25 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   color: #FFF;
 }
-body, html {
+
+body,
+html {
   height: 100%;
   width: 100%;
   margin: 0;
   font-size: 16px;
-  font-family: "Roboto","Helvetica Neue",sans-serif!important;
+  font-family: "Sora", "Helvetica Neue", sans-serif !important;
 }
+
 .container {
   max-width: 1140px;
   margin: 0 auto;
   padding: 0 15px;
 }
+
 .network-page {
   background: #0F1523;
   height: 100vh;
@@ -23,46 +27,65 @@ body, html {
   padding: 40px 0 60px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
+
 .header-network__logo {
   text-align: center;
   margin-bottom: 20px;
 }
+
 .header-network__logo img {
   height: 60px;
 }
+
 .body-network {
   background-image: url('./images/HXRO_Illos_ComingSoon.svg');
   height: 80vh;
   background-repeat: no-repeat;
   background-position: center center;
+  position: relative;
 }
+
 .body-network__wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .body-network__container {
   text-align: center;
-  padding: 13vh 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
 }
+
 .sub-title-network {
   color: #01ff00;
-  font-weight: 400;
   line-height: 1.5rem;
   font-size: 1.25rem;
+  margin-bottom: 10px;
 }
+
 .title-network {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   line-height: 3rem;
+  font-weight: 500;
 }
+
 .description {
-  font-size: 4.5rem;
+  font-size: 4rem;
   padding: 8vh 0 8vh;
 }
+
 .info-join {
   font-size: 1rem;
 }
+
 .btn-link {
   text-decoration: unset;
   padding: 20px 25px;
@@ -76,59 +99,119 @@ body, html {
   -ms-border-radius: .2rem;
   -o-border-radius: .2rem;
 }
-@media (max-width: 1440px) {
-  .description {
-    padding: 9vh 0 9vh;
+@media(min-width: 2000px) {
+  .body-network__container {
+    transform: translateY(-50%) scale(1.5);
+    -webkit-transform: translateY(-50%) scale(1.5);
+    -moz-transform: translateY(-50%) scale(1.5);
+    -ms-transform: translateY(-50%) scale(1.5);
+    -o-transform: translateY(-50%) scale(1.5);
+}
+}
+
+@media(min-height: 500px) {
+  @media (max-width: 1440px) {
+    .description {
+      padding: 9vh 0 9vh;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .description {
+      font-size: 4rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .description {
+      padding: 8vh 0 6vh;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .network-page {
+      padding: 20px 0;
+      height: 100%;
+    }
+
+    .header-network__logo {
+      margin-bottom: 10px;
+    }
+
+    .body-network {
+      height: 100%;
+      background-size: 140%;
+      background-position: top center
+    }
+
+    .body-network__container {
+      padding: 60px 0;
+    }
+
+    .sub-title-network {
+      font-size: .75rem;
+      font-weight: 1.2rem;
+    }
+
+    .title-network {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+
+    .description {
+      font-size: 2rem;
+      padding: 2vh 0 4vh;
+    }
+
+    .info-join {
+      font-size: 1.25rem;
+    }
+
+    .btn-link {
+      padding: 15px 20px;
+      font-size: 1.25rem;
+    }
+  }
+
+  @media (max-width: 375px) {
+    .description {
+      font-size: 2.5rem;
+    }
   }
 }
-@media (max-width: 1024px) {
-  .description {
-    font-size: 4rem;
-  }
-}
-@media (max-width: 768px) {
-  .description {
-    padding: 8vh 0 6vh;
-  }
-}
-@media (max-width: 600px) {
+
+@media(max-height: 499px) {
   .network-page {
-    padding: 20px 0;
-    height: 100%;
+    padding: 20px 0 30px;
   }
+
   .header-network__logo {
     margin-bottom: 10px;
   }
+
+  .header-network__logo img {
+    height: 40px;
+  }
+
   .body-network {
-    height: 100%;
-    background-size: 140%;
-    background-position: top center
+    background-size: 50%;
   }
-  .body-network__container {
-    padding: 60px 0;
-  }
+
   .sub-title-network {
-    font-size: .75rem;
-    font-weight: 1.2rem;
+    line-height: 1.5rem;
+    font-size: 1rem;
   }
+
   .title-network {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-  .description {
-    font-size: 2rem;
-    padding: 2vh 0 4vh;
-  }
-  .info-join {
     font-size: 1.25rem;
+    line-height: 1.5rem;
   }
-  .btn-link {
-    padding: 15px 20px;
-    font-size: 1.25rem;
-  }
-}
-@media (max-width: 375px) {
+
   .description {
     font-size: 2.5rem;
+    padding: 2vh 0 2vh;
+  }
+  .btn-link {
+    padding: 10px 15px;
   }
 }
